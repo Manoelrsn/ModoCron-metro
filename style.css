@@ -120,14 +120,12 @@ body{
         
         /*---Class C (Interface) - (Display -h3 and h4 -) ---*/
             .Interface h3{
-                background: green;
                 height: 10vw;
                 margin-left: 10vw;
                 width: 45vw;
                 font-size: 8vw;
             }
             .Interface h4{
-                background: red;
                 padding-top: 1.8vw;
                 height: 8.2vw;
                 padding-left: 1vw;
