@@ -7,15 +7,11 @@ let Miliseconds = 0;
 let cronometro;
 
 /*Auxiliary Functions*/
-function SettingOne(date){
+function Setting(date){
     return date > 10 ? date : `0${date}`; 
 }
-function SettingTwo(date){
-    let returnDate = SettingOne(date);
-    return returnDate > 100 ? returnDate : `0${returnDate}`;
-}
 function counter(){
-    if(Miliseconds == 1000){
+    if(Miliseconds == 100){
         Seconds += 1;
         Miliseconds = 0;
     }
@@ -27,8 +23,10 @@ function counter(){
         Hours += 1;
         Minutes = 0;
     }
-    document.getElementById('Display').innerText = `${SettingOne(Hours)} : ${SettingOne(Minutes)} : ${SettingOne(Seconds)}. `;
-    document.getElementById('Displaytwo').innerText = `${SettingTwo(Miliseconds)}`;
+    document.getElementById('Hours').innerText = `${Setting(Hours)}`;
+    document.getElementById('Minutes').innerText = `${Setting(Minutes)}`;
+    document.getElementById('Seconds').innerText = `${Setting(Seconds)}`;
+    document.getElementById('Miliseconds').innerText = `${Setting(Miliseconds)}`;
     Miliseconds+= 1;
 }
 
@@ -45,6 +43,8 @@ function reset(){
     Minutes = 0;
     Seconds = 0;
     Miliseconds = 0;
-    document.getElementById('Display').innerText = `00 : 00 : 00. `;
-    document.getElementById('Displaytwo').innerText = `000`;
+    document.getElementById('Hours').innerText = `00`;
+    document.getElementById('Minutes').innerText = `00`;
+    document.getElementById('Seconds').innerText = `00`;
+    document.getElementById('Miliseconds').innerText = `00`;
 }
